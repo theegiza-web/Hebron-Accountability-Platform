@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/Home';
 import { AboutPage } from './pages/About';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/issues" element={<IssuesPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          
         </Routes>
       </Layout>
     </Router>
