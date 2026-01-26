@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/BBMAP/' : '/',
+  base: './',
   server: {
     open: true,
     port: 5173,
