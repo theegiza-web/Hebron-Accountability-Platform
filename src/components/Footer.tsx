@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, AlertCircle } from 'lucide-react';
+import { AlertCircle, MessageCircle, Facebook } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -31,21 +30,46 @@ export const Footer: React.FC = () => {
             <h3 className="font-serif font-semibold text-slate-50 mb-4">
               Quick Links
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="grid grid-cols-2 gap-2 text-sm">
               <li>
-                <Link to="/about" className="text-slate-300 hover:text-slate-100 transition-colors">
+                <a href="/#/about" className="text-slate-300 hover:text-slate-100 transition-colors">
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/evidence" className="text-slate-300 hover:text-slate-100 transition-colors">
+                <a href="/#/evidence" className="text-slate-300 hover:text-slate-100 transition-colors">
                   Evidence
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="text-slate-300 hover:text-slate-100 transition-colors">
+                <a href="/#/issues" className="text-slate-300 hover:text-slate-100 transition-colors">
+                  Issues
+                </a>
+              </li>
+              <li>
+                <a href="/#/responses" className="text-slate-300 hover:text-slate-100 transition-colors">
+                  Responses
+                </a>
+              </li>
+              <li>
+                <a href="/#/petition" className="text-slate-300 hover:text-slate-100 transition-colors">
+                  Petition
+                </a>
+              </li>
+              <li>
+                <a href="/#/petition-dashboard" className="text-slate-300 hover:text-slate-100 transition-colors">
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="/#/contact" className="text-slate-300 hover:text-slate-100 transition-colors">
                   Contact
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a href="/#/admin/issues" className="text-slate-300 hover:text-slate-100 transition-colors">
+                  Admin
+                </a>
               </li>
             </ul>
           </div>
@@ -55,20 +79,54 @@ export const Footer: React.FC = () => {
             <h3 className="font-serif font-semibold text-slate-50 mb-4">
               Get In Touch
             </h3>
-            <a
-              href="mailto:info@bakwenabamogopa.org"
-              className="inline-flex items-center gap-2 text-slate-300 hover:text-slate-100 transition-colors text-sm"
-            >
-              <Mail size={16} />
-              info@bakwenabamogopa.org
-            </a>
+            <div className="space-y-4">
+              <div>
+                <div className="space-y-2 mb-4">
+                  <div className="text-slate-300 text-sm">
+                    <p className="font-semibold">Bethanie:</p>
+                    <a href="tel:+27796586452" className="hover:text-slate-100 transition-colors">
+                      079 658 6452
+                    </a>
+                  </div>
+                  <div className="text-slate-300 text-sm">
+                    <p className="font-semibold">Hebron:</p>
+                    <a href="tel:+27734623287" className="hover:text-slate-100 transition-colors">
+                      073 462 3287
+                    </a>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <a
+                    href="https://chat.whatsapp.com/GQStodwtiUnBHibZzzUTaO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-green-400 transition-colors"
+                    title="WhatsApp"
+                  >
+                    <MessageCircle size={20} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61587026570605"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-blue-400 transition-colors"
+                    title="Facebook"
+                  >
+                    <Facebook size={20} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate-800 pt-8">
+        <div className="border-t border-slate-800 pt-8 mt-8">
           <p className="text-sm text-slate-400 text-center">
-            © {currentYear} Hebron Accountability Platform – Bakwena ba Mogopa. All rights reserved.
+            © {currentYear} Bakwena Ba Mogopa Region Accountability Platform. All rights reserved.
+          </p>
+          <p className="text-xs text-slate-500 text-center mt-2">
+            Platform developed by gISUS dev & Solutions · Community-first, open-source
           </p>
         </div>
       </div>

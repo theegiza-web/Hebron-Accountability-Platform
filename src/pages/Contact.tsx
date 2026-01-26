@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, AlertCircle, CheckCircle, MessageSquare } from 'lucide-react';
+import { Phone, AlertCircle, CheckCircle, MessageSquare, MessageCircle, Facebook } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { contactContent } from '../content/pages';
 
 export const ContactPage: React.FC = () => {
-  const { email, response, privacy, corrections } = contactContent;
+  const { response, privacy, corrections } = contactContent;
 
   return (
     <div className="w-full">
@@ -14,22 +14,58 @@ export const ContactPage: React.FC = () => {
         subtitle={contactContent.intro}
       />
 
-      {/* Contact Email */}
+      {/* Contact Phone */}
       <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-900 text-white rounded-full mb-6">
-            <Mail size={32} />
+            <Phone size={32} />
           </div>
           <h2 className="text-3xl font-serif font-bold text-slate-900 mb-4">Get in Touch</h2>
           <p className="text-lg text-slate-600 mb-8">
-            Contact us directly at:
+            Contact us directly:
           </p>
-          <a
-            href={`mailto:${email}`}
-            className="text-3xl font-bold text-slate-900 hover:text-slate-700 transition-colors break-all"
-          >
-            {email}
-          </a>
+          <div className="space-y-4">
+            <div>
+              <p className="text-lg font-semibold text-slate-700 mb-2">Bethanie</p>
+              <a
+                href="tel:+27796586452"
+                className="text-3xl font-bold text-slate-900 hover:text-slate-700 transition-colors"
+              >
+                079 658 6452
+              </a>
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-slate-700 mb-2">Hebron</p>
+              <a
+                href="tel:+27734623287"
+                className="text-3xl font-bold text-slate-900 hover:text-slate-700 transition-colors"
+              >
+                073 462 3287
+              </a>
+            </div>
+            <div className="pt-6 flex gap-4 justify-center">
+              <a
+                href="https://chat.whatsapp.com/GQStodwtiUnBHibZzzUTaO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                title="Join WhatsApp Group"
+              >
+                <MessageCircle size={20} />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61587026570605"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                title="Follow on Facebook"
+              >
+                <Facebook size={20} />
+                <span>Facebook</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

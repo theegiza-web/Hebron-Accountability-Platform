@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,26 +9,40 @@ const navLinks = [
   { label: 'Evidence', href: '/evidence' },
   { label: 'Timeline', href: '/timeline' },
   { label: 'Issues', href: '/issues' },
+  { label: 'Strategy', href: '/strategy' },
   { label: 'Resources', href: '/resources' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Petition', href: '/petition' },
+  { label: 'Dashboard', href: '/petition-dashboard' }
+
 ];
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (href: string) => location.pathname === href;
+  useEffect(() => {
+  setIsOpen(false);
+}, [location.key]);
+
+  const isActive = (href: string) =>
+  location.pathname === href || location.hash === `#${href}`;
+
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+      <div className="max-w-6xl mx-auto px-0 sm:px-4 lg:px-8">
+        <div className="flex justify-between items-center h-16 px-2 sm:px-0">
+          {/* Logo with Icon */}
           <Link
             to="/"
-            className="text-lg font-serif font-bold text-slate-900 hover:text-slate-700 transition-colors"
+            className="text-slate-900 hover:text-slate-700 transition-colors p-0"
           >
-            Bakwena ba Mogopa
+            <img
+              src={`${import.meta.env.BASE_URL}downloads/icon.png`}
+              alt="Bakwena ba Mogopa Logo"
+              className="h-24 w-24 sm:h-24 sm:w-24 lg:h-26 md:h-24 md:w-24 lg:w-26 object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

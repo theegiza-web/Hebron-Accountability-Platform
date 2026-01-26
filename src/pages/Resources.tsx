@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { resourcesContent } from '../content/pages';
 
 export const ResourcesPage: React.FC = () => {
-  const { faqs, submission, downloads } = resourcesContent;
+  const { faqs, submission } = resourcesContent;
 
   return (
     <div className="w-full">
@@ -63,54 +63,29 @@ export const ResourcesPage: React.FC = () => {
           </div>
 
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 flex gap-4">
-            <Mail className="text-blue-600 flex-shrink-0 mt-1" size={24} />
+            <Phone className="text-blue-600 flex-shrink-0 mt-1" size={24} />
             <div>
               <h3 className="font-semibold text-blue-900 mb-2">Get in Touch</h3>
               <p className="text-blue-700 mb-1">
-                Email:{' '}
+                Bethanie:{' '}
                 <a
-                  href={`mailto:${submission.contact.email}`}
+                  href="tel:+27796586452"
                   className="font-semibold hover:underline"
                 >
-                  {submission.contact.email}
+                  079 658 6452
+                </a>
+              </p>
+              <p className="text-blue-700 mb-1">
+                Hebron:{' '}
+                <a
+                  href="tel:+27734623287"
+                  className="font-semibold hover:underline"
+                >
+                  073 462 3287
                 </a>
               </p>
               <p className="text-blue-700 text-sm">{submission.contact.note}</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Downloads */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">
-            Available Downloads
-          </h2>
-          <div className="grid gap-6">
-            {downloads.map((resource, idx) => (
-              <motion.article
-                key={idx}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-slate-50 rounded-lg p-6 border border-slate-200 flex items-start justify-between hover:shadow-md transition-shadow"
-              >
-                <div>
-                  <h3 className="text-lg font-serif font-semibold text-slate-900 mb-2">
-                    {resource.title}
-                  </h3>
-                  <p className="text-slate-600">{resource.description}</p>
-                </div>
-                <a
-                  href="#"
-                  className="ml-4 inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors flex-shrink-0 whitespace-nowrap"
-                >
-                  <Download size={16} />
-                  Download
-                </a>
-              </motion.article>
-            ))}
           </div>
         </div>
       </section>

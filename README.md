@@ -1,6 +1,6 @@
-# Hebron Accountability Platform – Bakwena ba Mogopa
+# Bakwena Ba Mogopa Region Accountability Platform
 
-A community-maintained, public-interest archive presenting documented concerns, supporting material, and timelines relating to governance, finance, and accountability within the Bakwena ba Mogopa community (including matters affecting Hebron).
+A community-maintained, public-interest archive presenting documented concerns, supporting material, and timelines relating to governance, finance, and accountability within the Bakwena Ba Mogopa Region.
 
 ## Purpose
 This platform:

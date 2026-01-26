@@ -1,19 +1,22 @@
 export const homeContent = {
+  greeting: "Pula!",
   hero: {
     title: "Why This Platform Exists",
     subtitle:
-      "A community-led effort to document governance, finance, and accountability concerns affecting Hebron and the wider Bakwena ba Mogopa community.",
+      "A community-led effort to document governance, finance, and accountability concerns affecting Bakwena Ba Mogopa Region.",
     description:
       "Over a number of years, community members, councillors, and officials have recorded serious concerns about governance, financial administration, procurement practices, and the handling of community assets. This platform preserves those documented concerns and supporting material in one place, so the record remains accessible, traceable, and difficult to erase.",
     ctaButtons: [
+      { label: "Raise an Issue", href: "/raise-issue", highlight: true },
       { label: "View Evidence", href: "/evidence" },
       { label: "Understand Our Work", href: "/about" },
       { label: "Timeline of Events", href: "/timeline" },
+      { label: "Sign Petition", href: "/petition" },
     ],
   },
 
   whatIsHappening: {
-    title: "What is Happening in Hebron",
+    title: "What is Happening in Bakwena Ba Mogopa region",
     content: [
       "Community reports describe deep and ongoing governance challenges, including breakdowns in administrative controls, unclear decision-making, and disputes within leadership structures.",
       "Concerns recorded include major expenditure items requiring explanation, irregular procurement practices, and repeated requests for supporting documentation, resolutions, and financial reporting.",
@@ -70,7 +73,7 @@ export const aboutContent = {
   purpose: {
     title: "Purpose and Scope",
     content: [
-      "This platform preserves and presents documented concerns relating to governance, financial administration, procurement, and accountability within the Bakwena ba Mogopa traditional community, including issues affecting Hebron and surrounding areas.",
+      "This platform preserves and presents documented concerns relating to governance, financial administration, procurement, and accountability within the Bakwena Ba Mogopa Region.",
       "The platform is not a court of law and does not determine guilt or innocence. It presents documented concerns, supporting material, and unanswered questions in a structured way so that they can be scrutinised properly.",
       "This archive is intended for community members, journalists, researchers, civil society, and relevant oversight authorities. Its purpose is transparency, public understanding, and accountable governance.",
     ],
@@ -161,7 +164,7 @@ export const resourcesContent = {
     {
       question: "What is this platform?",
       answer:
-        "This is a community-maintained archive documenting governance, financial administration, and accountability concerns within the Bakwena ba Mogopa community, including matters affecting Hebron. It brings together referenced reports and supporting material in one structured place.",
+        "This is a community-maintained archive documenting governance, financial administration, and accountability concerns within the Bakwena Ba Mogopa Region. It brings together referenced reports and supporting material in one structured place.",
     },
     {
       question: "Is this an official government site?",
@@ -202,9 +205,12 @@ export const resourcesContent = {
       "If you are responding to an entry, reference the exact title or ID so it can be linked properly",
     ],
     contact: {
-      email: "info@bakwenabamogopa.org",
+      phones: {
+        bethanie: "079 658 6452",
+        hebron: "073 462 3287"
+      },
       note:
-        "Please avoid sending sensitive personal information over ordinary email. Contact us first if secure handling is required.",
+        "For secure handling of sensitive information or queries, please call us directly.",
     },
   },
 
@@ -234,7 +240,10 @@ export const contactContent = {
   title: "Get in Touch",
   intro:
     "Contact us if you have questions, additional documentation, corrections, or if you need to respond to recorded concerns.",
-  email: "info@bakwenabamogopa.org",
+  phones: {
+    bethanie: "079 658 6452",
+    hebron: "073 462 3287"
+  },
 
   response: {
     title: "Right of Reply",
@@ -242,14 +251,14 @@ export const contactContent = {
       "Anyone referenced in or affected by documented concerns on this platform is invited to respond.",
       "Responses should be clear, factual, and supported by evidence where possible.",
       "If a response is substantive and relevant, it may be published alongside the original entry to preserve fairness and context.",
-      'To submit a response, email us with the subject line: "Response to [Evidence ID / Title]".',
+      'To submit a response, please call us with the subject line: "Response to [Evidence ID / Title]".',
     ],
   },
 
   privacy: {
     title: "Privacy Note",
     content: [
-      "Do not submit sensitive personal information through public email.",
+      "When calling with sensitive information, choose a secure location where your privacy is protected.",
       "If your submission includes personal data about private individuals, contact us first to discuss secure handling.",
       "We aim to protect the identity of individuals providing information in good faith where a confidentiality request is reasonable and lawful.",
     ],
@@ -258,9 +267,110 @@ export const contactContent = {
   corrections: {
     title: "Corrections and Feedback",
     content: [
-      "If you identify an error or inaccuracy, email us with supporting documentation.",
+      "If you identify an error or inaccuracy, please call us with supporting documentation.",
       "Substantive corrections will be published transparently alongside the original material.",
       "We aim to correct errors promptly and maintain the credibility of this archive.",
     ],
   },
+};
+
+export const strategyFrameworkContent = {
+  hero: {
+    title: "Strategic Framework",
+    subtitle: "Hard Power & Soft Power Media Pathways • Bakwena Accountability Process",
+    buttons: [
+      { label: "Download PDF", href: "/resources", highlight: true },
+      { label: "View Summary", href: "#summary" },
+    ]
+  },
+  summary: {
+    id: "summary",
+    title: "Strategic Overview",
+    cards: [
+      {
+        title: "Purpose",
+        description: "Disciplined, lawful strategy designed to avoid backlash and retaliation while ensuring accountability.",
+        isPositive: true
+      },
+      {
+        title: "What it is Not",
+        description: "We avoid emotional confrontation, public shaming, or impulsive exposure that undermines long-term goals.",
+        isPositive: false
+      }
+    ]
+  },
+  principles: {
+    title: "Core Strategic Principles",
+    items: [
+      {
+        title: "Rejection of emotional confrontation",
+        description: "Focus on facts and institutional processes rather than personal emotional escalation."
+      },
+      {
+        title: "Separation of allegations",
+        description: "Systematically separating financial allegations from personal or political disputes."
+      },
+      {
+        title: "Centralised media engagement",
+        description: "All media communication is coordinated through designated channels to ensure consistency."
+      },
+      {
+        title: "Process over speed",
+        description: "Priority is given to thorough, lawful processes over immediate, reactive responses."
+      },
+      {
+        title: "Discipline as power",
+        description: "Maintaining strict discipline in communication and action is our primary source of influence."
+      }
+    ]
+  },
+  pathways: {
+    title: "The Two Strategic Pathways",
+    hardPower: {
+      title: "Hard Power Pathway",
+      subtitle: "Investigative / Institutional",
+      objective: "Focus on systemic failures and financial accountability (not personal drama).",
+      sections: [
+        {
+          title: "Media Protocol",
+          description: "Communication via single representative, email-first approach, and zero leaks."
+        },
+        {
+          title: "Investigation Discipline",
+          description: "Strict silence on financial details while investigations are in progress."
+        }
+      ],
+      warning: "Maintain strict confidentiality and avoid public speculation to protect the integrity of the process."
+    },
+    softPower: {
+      title: "Soft Power Pathway",
+      subtitle: "Cultural & Institutional Legitimacy",
+      objective: "Interrogate the legitimacy of the office and institution (not the individual).",
+      sections: [
+        {
+          title: "Engagement Platforms",
+          description: "Utilising podcasts, community forums, and customary law spaces."
+        },
+        {
+          title: "Approved Themes",
+          description: "Focus on institutional accountability and cultural integrity vs prohibited personality-based framing."
+        }
+      ],
+      warning: "Soft power engagements must never be mixed with specific financial or corruption claims."
+    }
+  },
+  discipline: {
+    title: "Communication Discipline",
+    items: [
+      "Authorised spokespersons only",
+      "No freelance interviews",
+      "No contradictions in public statements",
+      "Breaches weaken investigations & expose participants to risk"
+    ]
+  },
+  conclusion: {
+    title: "Why This Strategy Works",
+    lessons: "Previous efforts often failed due to premature exposure, mixed allegations, and emotional escalation which allowed for easy dismissal.",
+    final: "Strategic rebellion is disciplined, lawful, and designed for irreversible outcomes."
+  }
 };

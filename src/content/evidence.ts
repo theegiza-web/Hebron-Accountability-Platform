@@ -22,7 +22,7 @@ export const evidence: EvidenceEntry[] = [
     tags: ['Community Funds', 'Accountability', 'Financial Reporting'],
     quote:
       'Several expenditure items could not be reconciled with approved budgets or council resolutions.',
-    downloadUrl: '/downloads/dossier-final-2016-v1.pdf',
+    downloadUrl: '/downloads/high-level-community-report-2021-v1.pdf',
   },
   {
     id: 'ev-002',
@@ -63,7 +63,7 @@ export const evidence: EvidenceEntry[] = [
     tags: ['Royal House', 'Wasteful Expenditure', 'Financial Accountability'],
     quote:
       'The total cost of the Royal House renovation was deemed excessive and inadequately justified.',
-    downloadUrl: '/downloads/high-level-community-report-2021-v1.pdf',
+    downloadUrl: '/downloads/dossier-final-2016-v1.pdf',
   },
   {
     id: 'ev-005',

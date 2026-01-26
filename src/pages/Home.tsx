@@ -5,7 +5,7 @@ import { AlertTriangle, ChevronRight } from 'lucide-react';
 import { homeContent } from '../content/pages';
 
 export const HomePage: React.FC = () => {
-  const { hero, whatIsHappening, whatWeProvide, whyFactual, ctaFooter } = homeContent;
+  const { greeting, hero, whatIsHappening, whatWeProvide, whyFactual, ctaFooter } = homeContent;
 
   return (
     <div className="w-full">
@@ -18,6 +18,9 @@ export const HomePage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
+            <p className="text-2xl sm:text-3xl font-serif text-slate-700 mb-4">
+              {greeting}
+            </p>
             <h1 className="text-5xl sm:text-6xl font-serif font-bold text-slate-900 mb-6 leading-tight">
               {hero.title}
             </h1>
@@ -29,8 +32,8 @@ export const HomePage: React.FC = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {hero.ctaButtons.map((btn, idx) => (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+              {hero.ctaButtons.map((btn: any, idx) => (
                 <motion.div
                   key={btn.href}
                   initial={{ opacity: 0, y: 10 }}
@@ -39,7 +42,11 @@ export const HomePage: React.FC = () => {
                 >
                   <Link
                     to={btn.href}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors"
+                    className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${
+                      btn.highlight
+                        ? 'bg-red-600 text-white hover:bg-red-700 shadow-lg hover:shadow-xl'
+                        : 'bg-slate-900 text-white hover:bg-slate-800'
+                    }`}
                   >
                     {btn.label}
                     <ChevronRight size={18} />
